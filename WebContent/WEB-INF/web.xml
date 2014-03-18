@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://java.sun.com/xml/ns/javaee" xmlns:web="http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd" xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd" id="WebApp_ID" version="3.0">
+  <display-name>EventReminder1</display-name>
+  <resource-ref>
+    <description>MySQL Datasource example</description>
+    <res-ref-name>jdbc/rem_datasource</res-ref-name>
+    <res-type>javax.sql.DataSource</res-type>
+    <res-auth>Container</res-auth>
+  </resource-ref>
+  <servlet>
+    <description>
+    </description>
+    <display-name>LogonServlet</display-name>
+    <servlet-name>LogonServlet</servlet-name>
+    <servlet-class>LogonServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>LogonServlet</servlet-name>
+    <url-pattern>/login</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <display-name>HomePageServlet</display-name>
+    <servlet-name>HomePageServlet</servlet-name>
+    <servlet-class>HomePageServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>HomePageServlet</servlet-name>
+    <url-pattern>/Home</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <display-name>SaveUser</display-name>
+    <servlet-name>SaveUser</servlet-name>
+    <servlet-class>SaveUser</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>SaveUser</servlet-name>
+    <url-pattern>/NewUser</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <display-name>EditServlet</display-name>
+    <servlet-name>EditServlet</servlet-name>
+    <servlet-class>EditServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>EditServlet</servlet-name>
+    <url-pattern>/Edit</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <display-name>DeleteServlet</display-name>
+    <servlet-name>DeleteServlet</servlet-name>
+    <servlet-class>DeleteServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>DeleteServlet</servlet-name>
+    <url-pattern>/Table</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+    <display-name>DontDeleteServlet</display-name>
+    <servlet-name>DontDeleteServlet</servlet-name>
+    <servlet-class>DontDeleteServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>DontDeleteServlet</servlet-name>
+    <url-pattern>/ConfirmDelete</url-pattern>
+  </servlet-mapping>
+  
+  
+  <welcome-file-list>
+    <welcome-file>index.html</welcome-file>
+    <welcome-file>index.htm</welcome-file>
+    <welcome-file>index.jsp</welcome-file>
+    <welcome-file>default.html</welcome-file>
+    <welcome-file>default.htm</welcome-file>
+    <welcome-file>default.jsp</welcome-file>
+  </welcome-file-list>
+</web-app>
